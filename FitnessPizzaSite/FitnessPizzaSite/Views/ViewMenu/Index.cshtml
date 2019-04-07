@@ -1,0 +1,28 @@
+﻿@model IEnumerable<FitnessPizzaSite.Models.PizzaCompositionModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Ingredients</td>
+        <td>Description</td>
+        <td>Price</td>
+    </tr>
+    @foreach (var menuPizza in Model)
+    {
+        <tr>
+            <td>@menuPizza.Name</td>
+            <td>@menuPizza.Indgredients</td>
+            <td>@menuPizza.Description</td>
+            <td>@menuPizza.Price</td>
+        </tr>
+    }
+
+
+
+</table>
